@@ -5,6 +5,9 @@
   font-size: 17px;
   line-height: 1.6;
   color: #ffffff;
+  @include adaptive(767) {
+    font-size: 15px;
+  }
 }
 
 // DESC :: END

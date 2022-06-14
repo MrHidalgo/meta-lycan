@@ -97,14 +97,108 @@ var __webpack_exports__ = {};
   \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
- // EVENT LISTENER - LOAD
+
+
+var initSmoothScroll = function initSmoothScroll() {
+  var btnName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "[anchor-js]";
+  var animateSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1000;
+  $(btnName).on("click", function (e) {
+    var linkHref = $(e.currentTarget).attr('href'),
+        headerHeight = $(".header").outerHeight() || 0,
+        topHeightOffset = $(linkHref).offset().top - headerHeight;
+    $('[anchor-js]').removeClass('is-active');
+    $(e.currentTarget).addClass('is-active');
+    $('body, html').animate({
+      scrollTop: topHeightOffset
+    }, animateSpeed);
+  });
+};
+
+var initHeaderFixed = function initHeaderFixed() {
+  var countScroll = $(window).scrollTop(),
+      headerElement = $('.header');
+
+  if (countScroll > 10) {
+    headerElement.addClass("header--fixed");
+  } else {
+    headerElement.removeClass("header--fixed");
+  }
+};
+
+var initStellar = function initStellar() {
+  if ($("[parallax-js]").length) {
+    $(function () {
+      $.stellar({
+        // Set scrolling to be in either one or both directions
+        horizontalScrolling: false,
+        verticalScrolling: true,
+        // Set the global alignment offsets
+        horizontalOffset: 0,
+        verticalOffset: 0,
+        // Refreshes parallax content on window load and resize
+        responsive: false,
+        // Select which property is used to calculate scroll.
+        // Choose 'scroll', 'position', 'margin' or 'transform',
+        // or write your own 'scrollProperty' plugin.
+        scrollProperty: 'scroll',
+        // Select which property is used to position elements.
+        // Choose between 'position' or 'transform',
+        // or write your own 'positionProperty' plugin.
+        positionProperty: 'position',
+        // Enable or disable the two types of parallax
+        parallaxBackgrounds: true,
+        parallaxElements: true,
+        // Hide parallax elements that move outside the viewport
+        hideDistantElements: false,
+        // Customise how elements are shown and hidden
+        hideElement: function hideElement($elem) {
+          $elem.hide();
+        },
+        showElement: function showElement($elem) {
+          $elem.show();
+        }
+      });
+    });
+  }
+}; // EVENT LISTENER - LOAD
 // ========================================
+
 
 window.addEventListener('load', function (ev) {
   // COMMON
-  _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
+  _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad();
+  initSmoothScroll();
+  initHeaderFixed();
+  initStellar(); // MACROS
 
   gsap.to(".roadmap__bg img", {
+    scrollTrigger: {
+      scrub: true
+    },
+    y: function y(i, target) {
+      return -ScrollTrigger.maxScroll(window) * target.dataset.speed;
+    },
+    ease: "none"
+  });
+  gsap.to(".me__visual", {
+    scrollTrigger: {
+      scrub: true
+    },
+    y: function y(i, target) {
+      return -ScrollTrigger.maxScroll(window) * target.dataset.speed;
+    },
+    ease: "none"
+  });
+  gsap.to(".me__cover", {
+    scrollTrigger: {
+      scrub: true
+    },
+    y: function y(i, target) {
+      return -ScrollTrigger.maxScroll(window) * target.dataset.speed;
+    },
+    ease: "none"
+  });
+  gsap.to(".perks__visual", {
     scrollTrigger: {
       scrub: true
     },
@@ -123,7 +217,9 @@ window.addEventListener('load', function (ev) {
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 
-window.addEventListener('scroll', function (ev) {}, false);
+window.addEventListener('scroll', function (ev) {
+  initHeaderFixed();
+}, false);
 }();
 /******/ })()
 ;

@@ -4,18 +4,18 @@ section#me.me
 
   .me__bg
     div
-      img(src="img/img-me-cover.png" srcset="img/img-me-cover@2x.png 2x" alt="")
+      img.me__cover(src="img/img-me-cover.png" srcset="img/img-me-cover@2x.png 2x" alt="" data-speed="-0.015")
     div
       div
-        img(src="img/img-me-visual.png" srcset="img/img-me-visual@2x.png 2x" alt="")
+        img.me__visual(src="img/img-me-visual.png" srcset="img/img-me-visual@2x.png 2x" alt="" data-speed="0.055")
 
   .c-grid
     .me__wrapper
       div
-        h2.me__title.c-title About:
-        p.me__desc.c-desc Meta-Lycan is a collection of 11,100 uniquely designed 3D NFTs developed on the Ethereum blockchain and living in Meta-Underworld. Each of the beautifully minted Meta-Lycans will have traits and features that showcase their savage intellect, style, and rarity.
+        h2.me__title.c-title(data-aos="fade-up") About:
+        p.me__desc.c-desc(data-aos="fade-up" data-aos-delay="150") Meta-Lycan is a collection of 11,100 uniquely designed 3D NFTs developed on the Ethereum blockchain and living in Meta-Underworld. Each of the beautifully minted Meta-Lycans will have traits and features that showcase their savage intellect, style, and rarity.
 
-        .me__btn.c-btn__wrapper
+        .me__btn.c-btn__wrapper(data-aos="fade-up" data-aos-delay="200")
           a.c-btn.c-btn--small(href="#")
             span Are you ready to join the Meta-Lycan Army?
 

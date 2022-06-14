@@ -2,29 +2,29 @@
 
 section#home.home
 
-  .home__bg
-    img(src="img/img-home-bg-layout-1.png" alt="")
-    img(src="img/img-home-bg-layout-2.png" alt="")
-    img(src="img/img-home-bg-layout-3.png" alt="")
-    img(src="img/img-home-bg-layout-4.png" alt="")
-    img(src="img/img-home-bg-layout-5.png" alt="")
-    img(src="img/img-home-bg-layout-6.png" alt="")
-    img(src="img/img-home-bg-layout-7.png" alt="")
-    img(src="img/img-home-bg-layout-8.png" alt="")
+  .home__bg(parallax-js)
+    img(src="img/img-home-bg-layout-1.png" alt="" data-stellar-ratio="0.9")
+    img(src="img/img-home-bg-layout-2.png" alt="" data-stellar-ratio="1.05")
+    img(src="img/img-home-bg-layout-3.png" alt="" data-stellar-ratio="0.925")
+    img(src="img/img-home-bg-layout-4.png" alt="" data-stellar-ratio="1.025")
+    img(src="img/img-home-bg-layout-5.png" alt="" data-stellar-ratio="0.975")
+    img(src="img/img-home-bg-layout-6.png" alt="" data-stellar-ratio="1.05")
+    img(src="img/img-home-bg-layout-7.png" alt="" data-stellar-ratio="0.955")
+    img(src="img/img-home-bg-layout-8.png" alt="" data-stellar-ratio="1")
     img(src="img/img-home-bg-layout-9.png" alt="")
 
   .c-grid
     .home__wrapper
       div
 
-        h1 Meta-Lycans:
-        h2!= "Gatekeepers of the <br>Meta-Underworld. <br>Defenders of <br>the Physical!"
+        h1(data-aos="fade-up") Meta-Lycans:
+        h2(data-aos="fade-up")!= "Gatekeepers of the <br>Meta-Underworld. <br>Defenders of <br>the Physical!"
 
-        .home__btn.c-btn__wrapper
+        .home__btn.c-btn__wrapper(data-aos="fade-up")
           a.c-btn(href="#")
             span JOIN THE META-LYCAN ARMY!
 
-        .home__toggle
+        .home__toggle(data-aos="fade-up")
           div
             .c-btn__wrapper
               a.c-btn.c-btn--small.c-btn--radius(href="#")
@@ -35,7 +35,7 @@ section#home.home
               input(type='text' name='' value='50')
             button(type='button') +
 
-        .home__info
+        .home__info(data-aos="fade-up")
           div
             p
               i 4000/11000

@@ -1,10 +1,30 @@
 // SECTION :: START
 
 .story {
+  z-index: 5;
+  position: relative;
   padding-top: 90px;
-  padding-bottom: 90px;
+  padding-bottom: 40px;
   background-color: #364343;
-  text-align: center;
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 100px);
+
+    img {
+      @extend %imageResCoverAbs;
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+  }
 }
 
 // SECTION :: END

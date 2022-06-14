@@ -4,7 +4,7 @@
   margin-left: auto;
 }
 
-.team__bg img, .about__bg img, .story__bg img, .home__bg img {
+.roadmap__bg img, .team__bg img, .about__bg img, .story__bg img, .home__bg img {
   position: absolute;
   top: 0;
   left: 0;
@@ -16,7 +16,8 @@
      object-position: center;
 }
 
-.home__wrapper h1,
+.roadmap__circle p,
+.roadmap__circle span, .home__wrapper h1,
 .home__wrapper h2, .header__nav a, .c-btn, .c-title {
   font-family: "Cinzel", serif;
 }
@@ -883,4 +884,162 @@ picture {
   font-size: 16px;
   color: #adaca9;
   font-style: italic;
+}
+
+.roadmap {
+  z-index: 1;
+  position: relative;
+  padding-top: 180px;
+  padding-bottom: 90px;
+  background-color: #253030;
+}
+.roadmap__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.roadmap__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.roadmap__wrapper-left, .roadmap__wrapper-right {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+}
+.roadmap__wrapper-middle {
+  z-index: 1;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+}
+.roadmap__box {
+  padding: 40px 30px;
+  border: 1px solid #e6c784;
+  background-color: #364343;
+}
+.roadmap__box + .roadmap__box {
+  margin-top: 30px;
+}
+.roadmap__box > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.roadmap__box > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.roadmap__box > ul > li:not(:last-of-type) {
+  padding-bottom: 15px;
+}
+.roadmap__box > ul > li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 56px;
+  list-style-type: disc;
+}
+.roadmap__box > ul > li ul li {
+  list-style-type: disc;
+  font-size: 16px;
+  color: #ffffff;
+}
+.roadmap__box > ul > li ul li:not(:last-of-type) {
+  padding-bottom: 5px;
+}
+.roadmap__box > ul > li img {
+  display: block;
+  max-width: 100%;
+  min-width: 19px;
+  height: 19px;
+  margin-top: 2px;
+}
+.roadmap__box > ul > li span {
+  padding-left: 20px;
+  font-size: 16px;
+  color: #ffffff;
+}
+.roadmap__circle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 164px;
+  height: 164px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background-image: url("../img/img-roadmap-circle@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.roadmap__circle-1:after, .roadmap__circle-2:after, .roadmap__circle-3:after, .roadmap__circle-4:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 2px;
+  width: 150px;
+  background-color: #e6c784;
+}
+.roadmap__circle-1:after, .roadmap__circle-3:after {
+  left: 0;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.roadmap__circle-2:after, .roadmap__circle-4:after {
+  right: 0;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.roadmap__circle + .roadmap__circle {
+  margin-top: 120px;
+}
+.roadmap__circle p,
+.roadmap__circle span {
+  color: #010101;
+  font-weight: bold;
+}
+.roadmap__circle p {
+  font-size: 51px;
+  line-height: 1;
+}
+.roadmap__circle span {
+  font-size: 30px;
+  line-height: 1;
 }

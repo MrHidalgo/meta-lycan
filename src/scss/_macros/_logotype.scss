@@ -5,6 +5,11 @@
     width: 100%;
     max-width: 264px;
   }
+  &.logo--footer {
+    width: 100%;
+    max-width: 323px;
+    padding-bottom: 30px;
+  }
 
   &__btn {
     display: flex;

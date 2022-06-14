@@ -1,5 +1,38 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #12100e;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 35px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      margin-left: 4px;
+      margin-right: 4px;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
 
 // FOOTER :: END

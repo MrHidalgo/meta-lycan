@@ -1,13 +1,9 @@
 // TITLE :: START
 
 .c-title {
-  &__text {
-    &-wrap {}
-  }
-
-  &__icon {
-    &-wrap {}
-  }
+  font-size: 39px;
+  color: #e6c683;
+  @extend %fontCinzel;
 }
 
 // TITLE :: END

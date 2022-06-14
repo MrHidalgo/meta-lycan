@@ -1,0 +1,68 @@
+// SECTION :: START
+
+.perks {
+  background-image: url('../img/img-perks-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    &-left,
+    &-right {
+      width: 50%;
+    }
+
+    &-left {
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    &-right {
+      padding-left: 30px;
+
+      > div {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        padding-bottom: 10px;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        min-width: 19px;
+        height: auto;
+      }
+
+      span {
+        padding-left: 20px;
+        font-size: 17px;
+        color: #e6c683;
+
+        strong {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END

@@ -1,0 +1,21 @@
+// LOGOTYPE :: START
+
+.logo {
+  &.logo--header {
+    width: 100%;
+    max-width: 264px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// LOGOTYPE :: END

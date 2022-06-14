@@ -1,0 +1,71 @@
+// HEADER :: START
+
+.header {
+  z-index: 990;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    a {
+      outline: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 32px;
+      font-size: 17px;
+      font-weight: 500;
+      @extend %fontCinzel;
+      color: #adaca9;
+      @include transition(color);
+
+      &.is-active,
+      &:hover {
+        color: #e6c784;
+        @include transition(color);
+      }
+    }
+  }
+
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 44px;
+    border: 1px solid #e6c784;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 16px;
+    color: #e6c784;
+    @include transition(background-color, color);
+
+    &:hover {
+      background-color: #e6c784;
+      color: #03131e;
+      @include transition(background-color, color);
+    }
+  }
+}
+
+// HEADER :: END

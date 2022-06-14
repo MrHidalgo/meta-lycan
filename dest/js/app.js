@@ -103,6 +103,23 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
+
+  gsap.to(".roadmap__bg img", {
+    scrollTrigger: {
+      scrub: true
+    },
+    y: function y(i, target) {
+      return -ScrollTrigger.maxScroll(window) * target.dataset.speed;
+    },
+    ease: "none"
+  });
+  AOS.init({
+    offset: 200,
+    duration: 600,
+    easing: 'ease-in-sine',
+    delay: 100,
+    once: true
+  });
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

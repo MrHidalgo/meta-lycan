@@ -4,6 +4,9 @@
   font-size: 39px;
   color: #e6c683;
   @extend %fontCinzel;
+  @include adaptive(767) {
+    font-size: 33px;
+  }
 }
 
 // TITLE :: END

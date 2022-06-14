@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/npu6xce.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- STYLE :: START-->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/app.css">
@@ -162,10 +163,10 @@
         <div class="team__bg"><img src="img/img-story-bg.png" srcset="img/img-story-bg@2x.png 2x" alt=""></div>
         <div class="c-grid">
           <div class="team__wrapper">
-            <h2 class="team__title c-title">Team Members info</h2>
-            <div class="c-line"></div>
+            <h2 class="team__title c-title" data-aos="fade-up">Team Members info</h2>
+            <div class="c-line" data-aos="fade-up" data-aos-delay="150"></div>
             <div class="team__box-wrapper">
-              <div class="team__box">
+              <div class="team__box" data-aos="fade-up" data-aos-delay="200">
                 <div class="team__box-head"><img src="img/img-team-1.png" srcset="img/img-team-1@2x.png 2x" alt=""></div>
                 <div class="team__box-body">
                   <p class="team__box-name">Ed “Ronin” Jones</p>
@@ -177,7 +178,7 @@
                   <p class="team__box-desc">“The creative adult is the  child who survived.”</p>
                 </div>
               </div>
-              <div class="team__box">
+              <div class="team__box" data-aos="fade-up" data-aos-delay="200">
                 <div class="team__box-head"><img src="img/img-team-2.png" srcset="img/img-team-2@2x.png 2x" alt=""></div>
                 <div class="team__box-body">
                   <p class="team__box-name">Cherlyn McIntee</p>
@@ -189,7 +190,7 @@
                   <p class="team__box-desc">“Full-time Bad-Ass”</p>
                 </div>
               </div>
-              <div class="team__box">
+              <div class="team__box" data-aos="fade-up" data-aos-delay="200">
                 <div class="team__box-head"><img src="img/img-team-3.png" srcset="img/img-team-3@2x.png 2x" alt=""></div>
                 <div class="team__box-body">
                   <p class="team__box-name">Jim Hinton</p>
@@ -208,11 +209,14 @@
       <!-- SECTION :: END-->
       <!-- SECTION :: START-->
       <section class="roadmap" id="roadmap">
-        <div class="roadmap__bg"><img src="img/img-roadmap-bg.png" alt=""></div>
+        <div class="roadmap__bg">
+          <!--div(data-speed="-0.045")--><img src="img/img-roadmap-bg.png" alt="" data-speed="-0.045">
+        </div>
         <div class="c-grid">
           <div class="roadmap__wrapper">
             <div class="roadmap__wrapper-left">
-              <div class="roadmap__box">
+              <div class="roadmap__box" data-aos="fade-up">
+                <h2 class="roadmap__title c-title">25% Sold</h2>
                 <ul>
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Additional content in the Meta-Lycans story released  Introduct</span></li>
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Introduction of the Meta Vamps (Origin Story) to the Meta-Underworld.</span></li>
@@ -231,7 +235,8 @@
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Giveaways</span></li>
                 </ul>
               </div>
-              <div class="roadmap__box">
+              <div class="roadmap__box" data-aos="fade-up" data-aos-delay="150">
+                <h2 class="roadmap__title c-title">50% Sold</h2>
                 <ul>
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Entry opens for selection of NFT holders to appear for speaking roles in our Meta-Lycans short film</span></li>
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Additional content in the Meta-Lycans story released</span></li>
@@ -242,21 +247,24 @@
               </div>
             </div>
             <div class="roadmap__wrapper-middle">
-              <div class="roadmap__circle roadmap__circle-1">
-                <p>25%</p><span>Sold</span>
-              </div>
-              <div class="roadmap__circle roadmap__circle-2">
-                <p>50%</p><span>Sold</span>
-              </div>
-              <div class="roadmap__circle roadmap__circle-3">
-                <p>75%</p><span>Sold</span>
-              </div>
-              <div class="roadmap__circle roadmap__circle-4">
-                <p>100%</p><span>Sold</span>
+              <div class="roadmap__circle-wrapper" data-aos="fade-up">
+                <div class="roadmap__circle roadmap__circle-1" data-aos="fade-up">
+                  <p>25%</p><span>Sold</span>
+                </div>
+                <div class="roadmap__circle roadmap__circle-2" data-aos="fade-up" data-aos-delay="150">
+                  <p>50%</p><span>Sold</span>
+                </div>
+                <div class="roadmap__circle roadmap__circle-3" data-aos="fade-up" data-aos-delay="200">
+                  <p>75%</p><span>Sold</span>
+                </div>
+                <div class="roadmap__circle roadmap__circle-4" data-aos="fade-up" data-aos-delay="250">
+                  <p>100%</p><span>Sold</span>
+                </div>
               </div>
             </div>
             <div class="roadmap__wrapper-right">
-              <div class="roadmap__box">
+              <div class="roadmap__box" data-aos="fade-up">
+                <h2 class="roadmap__title c-title">75% Sold</h2>
                 <ul>
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Develop script for Meta-Lycans short film</span></li>
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Open whitelist for Meta Vamps NFT for Meta-Lycans NFT holders</span></li>
@@ -265,7 +273,8 @@
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Additional Giveaways</span></li>
                 </ul>
               </div>
-              <div class="roadmap__box">
+              <div class="roadmap__box" data-aos="fade-up" data-aos-delay="150">
+                <h2 class="roadmap__title c-title">100% Sold</h2>
                 <ul>
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Entry opens for NFT holders to be selected as extras in the Meta-Lycans short film</span></li>
                   <li><img src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt=""><span>Additional content in the Meta-Lycans story released</span></li>
@@ -287,15 +296,17 @@
     <footer class="footer" id="footer">
       <div class="c-grid">
         <div class="footer__wrapper">
-          <div class="logo logo--footer"><a class="logo__btn" href="#"><img src="img/logo.svg" alt=""></a></div>
-          <nav class="footer__social"><a href="#"><img src="img/instagram.svg" alt=""></a><a href="#"><img src="img/twitter.svg" alt=""></a><a href="#"><img src="img/discord.svg" alt=""></a><a href="#"><img src="img/tiktok.svg" alt=""></a><a href="#"><img src="img/facebook.svg" alt=""></a><a href="#"><img src="img/reddit.svg" alt=""></a></nav>
-          <p class="copyright">copyright@metalycan 2022</p>
+          <div class="logo logo--footer" data-aos="fade-up"><a class="logo__btn" href="#"><img src="img/logo.svg" alt=""></a></div>
+          <nav class="footer__social" data-aos="fade-up" data-aos-offset="50" data-aos-delay="150"><a href="#"><img src="img/instagram.svg" alt=""></a><a href="#"><img src="img/twitter.svg" alt=""></a><a href="#"><img src="img/discord.svg" alt=""></a><a href="#"><img src="img/tiktok.svg" alt=""></a><a href="#"><img src="img/facebook.svg" alt=""></a><a href="#"><img src="img/reddit.svg" alt=""></a></nav>
+          <p class="copyright" data-aos="fade-up" data-aos-offset="0" data-aos-delay="200">copyright@metalycan 2022</p>
         </div>
       </div>
     </footer>
     <!-- FOOTER :: END-->
   </body>
   <!-- SCRIPT :: START-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/vendor.js"></script>
   <script src="js/app.js"></script>
   <!-- SCRIPT :: END-->

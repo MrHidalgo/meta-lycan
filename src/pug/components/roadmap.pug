@@ -3,14 +3,15 @@
 section#roadmap.roadmap
 
   .roadmap__bg
-    img(src="img/img-roadmap-bg.png" alt="")
+    //div(data-speed="-0.045")
+    img(src="img/img-roadmap-bg.png" alt="" data-speed="-0.045")
 
   .c-grid
     .roadmap__wrapper
       .roadmap__wrapper-left
 
-        .roadmap__box
-
+        .roadmap__box(data-aos="fade-up")
+          h2.roadmap__title.c-title 25% Sold
           ul
             li
               img(src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt="")
@@ -34,7 +35,8 @@ section#roadmap.roadmap
               img(src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt="")
               span Giveaways
 
-        .roadmap__box
+        .roadmap__box(data-aos="fade-up" data-aos-delay="150")
+          h2.roadmap__title.c-title 50% Sold
           ul
             li
               img(src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt="")
@@ -54,22 +56,24 @@ section#roadmap.roadmap
 
       .roadmap__wrapper-middle
 
-        .roadmap__circle.roadmap__circle-1
-          p 25%
-          span Sold
-        .roadmap__circle.roadmap__circle-2
-          p 50%
-          span Sold
-        .roadmap__circle.roadmap__circle-3
-          p 75%
-          span Sold
-        .roadmap__circle.roadmap__circle-4
-          p 100%
-          span Sold
+        .roadmap__circle-wrapper(data-aos="fade-up")
+          .roadmap__circle.roadmap__circle-1(data-aos="fade-up")
+            p 25%
+            span Sold
+          .roadmap__circle.roadmap__circle-2(data-aos="fade-up" data-aos-delay="150")
+            p 50%
+            span Sold
+          .roadmap__circle.roadmap__circle-3(data-aos="fade-up" data-aos-delay="200")
+            p 75%
+            span Sold
+          .roadmap__circle.roadmap__circle-4(data-aos="fade-up" data-aos-delay="250")
+            p 100%
+            span Sold
 
       .roadmap__wrapper-right
 
-        .roadmap__box
+        .roadmap__box(data-aos="fade-up")
+          h2.roadmap__title.c-title 75% Sold
           ul
             li
               img(src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt="")
@@ -87,7 +91,8 @@ section#roadmap.roadmap
               img(src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt="")
               span Additional Giveaways
 
-        .roadmap__box
+        .roadmap__box(data-aos="fade-up" data-aos-delay="150")
+          h2.roadmap__title.c-title 100% Sold
           ul
             li
               img(src="img/img-perks-list.png" srcset="img/img-perks-list@2x.png 2x" alt="")

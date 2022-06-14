@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #12100e;
   line-height: 1.42857143;
   font-size: 14px;
   font-weight: normal;
@@ -30,6 +30,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   > .main {
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;

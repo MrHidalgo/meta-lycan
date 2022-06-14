@@ -450,6 +450,15 @@ picture {
   height: 32px;
   margin-left: 4px;
   margin-right: 4px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.footer__social a:hover {
+  opacity: 0.55;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 .footer__social a img {
   display: block;

@@ -25,6 +25,12 @@
       height: 32px;
       margin-left: 4px;
       margin-right: 4px;
+      @include transition(opacity);
+
+      &:hover {
+        opacity: 0.55;
+        @include transition(opacity);
+      }
 
       img {
         display: block;

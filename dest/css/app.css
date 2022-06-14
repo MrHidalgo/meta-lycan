@@ -300,6 +300,16 @@ picture {
           justify-content: center;
 }
 
+.c-line {
+  width: 100%;
+  max-width: 260px;
+  height: 2px;
+  margin: 10px auto 30px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, #e6c784), to(rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #e6c784 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #e6c784 50%, rgba(255, 255, 255, 0) 100%);
+}
+
 .header {
   z-index: 990;
   position: fixed;
@@ -673,4 +683,11 @@ picture {
 }
 .perks__list li span strong {
   font-weight: bold;
+}
+
+.story {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #364343;
+  text-align: center;
 }
